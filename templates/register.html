@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🎓 UniEvents</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+    </div>
+</div>
+
+<div class="form-container">
+    <h1>Register for {{ event_name }}</h1>
+
+    <form action="/submit" method="POST" class="form-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="event" value="{{ event_name }}" readonly>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

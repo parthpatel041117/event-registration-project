@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🎓 UniEvents</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>{{ category|capitalize }} Events</h1>
+
+    <div class="event-grid">
+
+        {% for event in events %}
+        <div class="card">
+            <h3>{{ event[1] }}</h3>
+            <p>{{ event[3] }}</p>
+            <p>📅 {{ event[4] }}</p>
+
+            <a href="/register?event={{ event[1] }}">
+                <button>Register</button>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+</body>
+</html>

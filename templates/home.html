@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UniEvents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🎓 UniEvents</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/admin">Admin</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>University Fest 2026</h1>
+    <p>Select a category to explore events</p>
+</div>
+
+<div class="container">
+
+    <div class="event-grid">
+
+        <div class="card">
+            <h3>💻 Tech Events</h3>
+            <p>Hackathons & coding competitions</p>
+            <a href="/event/tech"><button>Explore</button></a>
+        </div>
+
+        <div class="card">
+            <h3>🎭 Cultural Events</h3>
+            <p>Dance, music & drama</p>
+            <a href="/event/cultural"><button>Explore</button></a>
+        </div>
+
+        <div class="card">
+            <h3>🛠 Workshops</h3>
+            <p>Hands-on learning sessions</p>
+            <a href="/event/workshop"><button>Explore</button></a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
